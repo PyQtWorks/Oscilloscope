@@ -360,7 +360,7 @@ class Oscilloscope(QMainWindow):
         
         self.setGeometry(0, 0, 1258, 720)   # ikkunan koko
         self.center()                       # keskitä näytölle
-        self.setWindowIcon(QIcon('icon.png'))  
+        self.setWindowIcon(QIcon('Media/icon.png'))  
         self.setWindowTitle('Oscilloscope') 
         
         self.ikkuna = Display(self)         # piirtoikkuna
@@ -905,32 +905,32 @@ class Oscilloscope(QMainWindow):
         
         """ MENU """
         
-        about = QAction(QIcon('about.png'), 'About', self)
+        about = QAction(QIcon('Media/about.png'), 'About', self)
         about.setShortcut('Ctrl+I')
         about.setStatusTip('About this application')
         about.triggered.connect(self.aboutEvent)
         
-        exitAction = QAction(QIcon('exit.png'), '&Exit', self)
+        exitAction = QAction(QIcon('Media/exit.png'), '&Exit', self)
         exitAction.setShortcut('Escape')
         exitAction.setStatusTip('Exit application')
         exitAction.triggered.connect(self.close) 
         
-        openFile = QAction(QIcon('open.png'), 'Open file', self)
+        openFile = QAction(QIcon('Media/open.png'), 'Open file', self)
         openFile.setShortcut('Ctrl+O')
         openFile.setStatusTip('Open channel 1 signal file')
         openFile.triggered.connect(self.OpenCh1)
         
-        openFile2 = QAction(QIcon('open.png'), 'Open file', self)
+        openFile2 = QAction(QIcon('Media/open.png'), 'Open file', self)
         openFile2.setShortcut('Ctrl+P')
         openFile2.setStatusTip('Open channel 2 signal file')
         openFile2.triggered.connect(self.OpenCh2)
         
-        chooseColor = QAction(QIcon('color.png'),'Draw color', self)
+        chooseColor = QAction(QIcon('Media/color.png'),'Draw color', self)
         chooseColor.setShortcut('Ctrl+U')
         chooseColor.setStatusTip('Choose signal 1 draw color')
         chooseColor.triggered.connect(self.showColorDialog)
         
-        chooseColor2 = QAction(QIcon('color.png'),'Draw color', self)
+        chooseColor2 = QAction(QIcon('Media/color.png'),'Draw color', self)
         chooseColor2.setShortcut('Ctrl+J')
         chooseColor2.setStatusTip('Choose signal 2 draw color')
         chooseColor2.triggered.connect(self.showColorDialog2)
@@ -941,12 +941,12 @@ class Oscilloscope(QMainWindow):
         LinkVoltages.setStatusTip('Link channel 2 controls to follow channel 1')
         LinkVoltages.toggled.connect(self.linkVoltages)
         
-        chooseBGColor = QAction(QIcon('color.png'),'Background color', self)
+        chooseBGColor = QAction(QIcon('Media/color.png'),'Background color', self)
         chooseBGColor.setShortcut('Ctrl+B')
         chooseBGColor.setStatusTip('Choose display background color')
         chooseBGColor.triggered.connect(self.ikkuna.showBackgroundColorDialog)
         
-        openTriggerFile = QAction(QIcon('open.png'), 'Open file', self)
+        openTriggerFile = QAction(QIcon('Media/open.png'), 'Open file', self)
         openTriggerFile.setShortcut('Ctrl+T')
         openTriggerFile.setStatusTip('Open external trigger signal file')
         openTriggerFile.triggered.connect(self.openTriggerFileDialog)
