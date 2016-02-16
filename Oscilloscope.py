@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 import sys, math
 from PyQt5 import QtCore
 from PyQt5.Qt import PYQT_VERSION_STR
